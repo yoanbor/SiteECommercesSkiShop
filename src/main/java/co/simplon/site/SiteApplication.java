@@ -1,13 +1,13 @@
-package co.simplon.siteecommernces;
+package co.simplon.site;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SiteECommerncesApplication {
+public class SiteApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SiteECommerncesApplication.class, args);
+        SpringApplication.run(SiteApplication.class, args);
     }
 
 }
