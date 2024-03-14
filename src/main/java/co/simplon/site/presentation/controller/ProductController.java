@@ -10,19 +10,23 @@ import java.util.List;
 @RestController
 public class ProductController {
 
-        private final IProductService productService;
+    private final IProductService productService;
 
-   @Autowired
-   public ProductController(IProductService productService) {
+    @Autowired
+    public ProductController(IProductService productService) {
+
         this.productService = productService;
     }
+
     @GetMapping("/products")
     public List<ProductDTO> listerProducts() {
+
         return productService.listerProducts();
     }
 
     @GetMapping("/product/{id}")
     public ProductDTO recupererParId(@PathVariable int id) {
+
         return productService.recupererParId(id);
     }
 
@@ -33,13 +37,13 @@ public class ProductController {
 
     @PutMapping("/product/{id}")
     public void modifyProduct(@PathVariable int id, @RequestBody ProductDTO productDTO) {
-         productService.modifyProduct(id, productDTO);
+        productService.modifyProduct(id, productDTO);
     }
 
     @DeleteMapping("/product/{id}")
     public void deleteProduct(@PathVariable int id) {
 
-       productService.deleteProduct(id);
+        productService.deleteProduct(id);
 
     }
 
