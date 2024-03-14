@@ -7,40 +7,52 @@ import co.simplon.site.persistance.repository.product.IProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements IProductService {
 
 
-    private IProductRepository ProductRepo;
+    private IProductRepository productRepo;
 
     @Override
     public List<ProductDTO> listerProducts() {
-        final List<Product> result = ProductRepo.findAll();
+        final List<Product> result = productRepo.findAll();
         return ProductConvert.getInstance().convertListEntityToListDto(result);
     }
 
     @Override
     public ProductDTO recupererParId(int id) {
-        final Product result = ProductRepo.getReferenceById(id);
+        final Product result = productRepo.getReferenceById(id);
         return ProductConvert.getInstance().convertEntityToDto(result);
     }
 
     @Override
     public void addProduct(ProductDTO product) {
-     ProductRepo.save(ProductConvert.getInstance().convertDtoToEntity(product));
+     productRepo.save(ProductConvert.getInstance().convertDtoToEntity(product));
 
     }
 
-    @Override
-    public void modifyProduct(ProductDTO product) {
-        ProductRepo.save(ProductConvert.getInstance().convertDtoToEntity(product));
-
-    }
 
     @Override
-    public void deleteProduct(ProductDTO product) {
-        ProductRepo.delete(ProductConvert.getInstance().convertDtoToEntity(product));
+    public void modifyProduct(int id, ProductDTO productDTO) {
+        Optional<Product> optionalProduct = productRepo.findById(id);
+        if (optionalProduct.isPresent()) {
+            Product existingProduct = optionalProduct.get();
+            existingProduct.setDesc(productDTO.getDesc());
+            existingProduct.setImg(productDTO.getImg());
+            existingProduct.setName(productDTO.getName());
+            existingProduct.setPrice(productDTO.getPrice());
+            existingProduct.setRef(productDTO.getRef());
+            existingProduct.setQuantity(productDTO.getQuantity());
+
+            productRepo.save(existingProduct);
+
+    }}
+
+    @Override
+    public void deleteProduct(int id) {
+        productRepo.deleteById(id);
 
     }
 }

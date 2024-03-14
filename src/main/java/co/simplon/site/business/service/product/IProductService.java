@@ -26,9 +26,9 @@ public interface IProductService {
     /**
      * @param product
      */
-    void modifyProduct(final ProductDTO product);
+    void modifyProduct(int id, final ProductDTO product);
     /**
-     * @param product
+     * @param id
      */
-    void deleteProduct(final ProductDTO product);
+    void deleteProduct(int id);
 }
