@@ -22,7 +22,7 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public ProductDTO recupererParId(int id) {
+    public ProductDTO findById(int id) {
         final Product result = productRepo.getReferenceById(id);
         return ProductConvert.getInstance().convertEntityToDto(result);
     }

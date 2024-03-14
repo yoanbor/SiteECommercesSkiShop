@@ -17,7 +17,7 @@ public interface IProductService {
      * @param id
      * @return
      */
-    ProductDTO recupererParId(final int id);
+    ProductDTO findById(final int id);
     /**
      * @param product
      */

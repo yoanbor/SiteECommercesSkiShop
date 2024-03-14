@@ -25,9 +25,9 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public ProductDTO recupererParId(@PathVariable int id) {
+    public ProductDTO findById(@PathVariable int id) {
 
-        return productService.recupererParId(id);
+        return productService.findById(id);
     }
 
     @PostMapping("/product")
