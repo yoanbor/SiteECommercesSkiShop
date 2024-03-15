@@ -4,6 +4,7 @@ import co.simplon.site.business.convert.ProductConvert;
 import co.simplon.site.business.dto.ProductDTO;
 import co.simplon.site.persistance.entity.Product;
 import co.simplon.site.persistance.repository.product.IProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,11 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements IProductService {
 
+
+    @Autowired
+    public void setProductRepo(IProductRepository productRepo) {
+        this.productRepo = productRepo;
+    }
 
     private IProductRepository productRepo;
 
