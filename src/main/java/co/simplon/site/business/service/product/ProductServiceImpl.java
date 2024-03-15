@@ -45,12 +45,12 @@ public class ProductServiceImpl implements IProductService {
         Optional<Product> optionalProduct = productRepo.findById(id);
         if (optionalProduct.isPresent()) {
             Product existingProduct = optionalProduct.get();
-            existingProduct.setDesc(productDTO.getDesc());
-            existingProduct.setImg(productDTO.getImg());
-            existingProduct.setName(productDTO.getName());
-            existingProduct.setPrice(productDTO.getPrice());
-            existingProduct.setRef(productDTO.getRef());
-            existingProduct.setQuantity(productDTO.getQuantity());
+            existingProduct.setDesc(productDTO.getDesc_product());
+            existingProduct.setImg(productDTO.getImg_product());
+            existingProduct.setName(productDTO.getName_product());
+            existingProduct.setPrice(productDTO.getPrice_product());
+            existingProduct.setRef(productDTO.getRef_product());
+            existingProduct.setQuantity(productDTO.getQuantity_product());
 
             productRepo.save(existingProduct);
 

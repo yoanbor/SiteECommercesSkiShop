@@ -2,115 +2,75 @@ package co.simplon.site.business.dto;
 
 public class ProductDTO {
 
-    private int id;
+    private int id_product;
 
-    private String name;
+    private String name_product;
 
-    private int price;
+    private int price_product;
 
-    private int ref;
+    private int ref_product;
 
-    private String desc;
+    private String desc_product;
 
-    private String img;
+    private String img_product;
 
-    private int quantity;
+    private int quantity_product;
 
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
+    public int getId_product() {
+        return id_product;
     }
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
+    public void setId_product(int id_product) {
+        this.id_product = id_product;
     }
 
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
+    public String getName_product() {
+        return name_product;
     }
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    public void setName_product(String name_product) {
+        this.name_product = name_product;
     }
 
-    /**
-     * @return the price
-     */
-    public int getPrice() {
-        return price;
+    public int getPrice_product() {
+        return price_product;
     }
 
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPrice_product(int price_product) {
+        this.price_product = price_product;
     }
 
-    /**
-     * @return the ref
-     */
-    public int getRef() {
-        return ref;
+    public int getRef_product() {
+        return ref_product;
     }
 
-    /**
-     * @param ref the ref to set
-     */
-    public void setRef(int ref) {
-        this.ref = ref;
+    public void setRef_product(int ref_product) {
+        this.ref_product = ref_product;
     }
 
-    /**
-     * @return the desc
-     */
-    public String getDesc() {
-        return desc;
+    public String getDesc_product() {
+        return desc_product;
     }
 
-    /**
-     * @param desc the desc to set
-     */
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDesc_product(String desc_product) {
+        this.desc_product = desc_product;
     }
 
-    /**
-     * @return the img
-     */
-    public String getImg() {
-        return img;
+    public String getImg_product() {
+        return img_product;
     }
 
-    /**
-     * @param img the img to set
-     */
-    public void setImg(String img) {
-        this.img = img;
+    public void setImg_product(String img_product) {
+        this.img_product = img_product;
     }
 
-    /**
-     * @return the quantity
-     */
-    public int getQuantity() {
-        return quantity;
+    public int getQuantity_product() {
+        return quantity_product;
     }
 
-    /**
-     * @param quantity the quantity to set
-     */
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantity_product(int quantity_product) {
+        this.quantity_product = quantity_product;
     }
+
+
 }

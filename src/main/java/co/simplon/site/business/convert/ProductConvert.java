@@ -22,26 +22,26 @@ public class ProductConvert {
 
 public ProductDTO convertEntityToDto(final Product entity) {
     final ProductDTO dto = new ProductDTO();
-    dto.setId(entity.getId());
-    dto.setName(entity.getName());
-    dto.setPrice(entity.getPrice());
-    dto.setRef(entity.getRef());
-    dto.setDesc(entity.getDesc());
-    dto.setImg(entity.getImg());
-    dto.setQuantity(entity.getQuantity());
+    dto.setId_product(entity.getId());
+    dto.setName_product(entity.getName());
+    dto.setPrice_product(entity.getPrice());
+    dto.setRef_product(entity.getRef());
+    dto.setDesc_product(entity.getDesc());
+    dto.setImg_product(entity.getImg());
+    dto.setQuantity_product(entity.getQuantity());
 
     return dto;
 }
 
 public Product convertDtoToEntity(final ProductDTO dto) {
         final Product entity = new Product();
-        entity.setId(dto.getId());
-        entity.setName(dto.getName());
-        entity.setPrice(dto.getPrice());
-        entity.setRef(dto.getRef());
-        entity.setDesc(dto.getDesc());
-        entity.setImg(dto.getImg());
-        entity.setQuantity(dto.getQuantity());
+        entity.setId(dto.getId_product());
+        entity.setName(dto.getName_product());
+        entity.setPrice(dto.getPrice_product());
+        entity.setRef(dto.getRef_product());
+        entity.setDesc(dto.getDesc_product());
+        entity.setImg(dto.getImg_product());
+        entity.setQuantity(dto.getQuantity_product());
         return entity;
 }
 
