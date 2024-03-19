@@ -82,6 +82,8 @@ Le projet est divisé en deux parties principales : le front-end et le back-end
 
 - Le dossier frontend contient le code Angular (ou React) pour l'interface utilisateur.
 - Pour lancer le front-end, suivez les instructions spécifiques dans le dossier frontend.
+
+  
 ***Back-End*** : 
 
 - Le dossier backend contient le code Symfony (ou PHP avec un autre framework) pour la logique métier et l'interaction avec la base de données.
