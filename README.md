@@ -54,7 +54,7 @@ Base de Données :
 ***3.Accès aux Données (Modèles)***
 - Rôle : Cette couche est responsable de l'accès aux données, qu'il s'agisse de lire, d'écrire, de modifier ou de supprimer des données dans la base de données.
 - Pattern MVC : Les modèles représentent la structure des données et la logique pour les manipuler. Ils interagissent avec la base de données via un ORM (Object-Relational Mapping) pour fournir un moyen de communication entre la logique métier et la base de données.
-- Technologies : ORM (JPA ORM pour Java) pour la gestion des données.
+- Technologies : JPA ORM pour Java pour la gestion des données.
 
 
 ***4.Base de Données***
