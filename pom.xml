@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>co.simplon</groupId>
-    <artifactId>Hospitol</artifactId>
+    <artifactId>Skishop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Hospitol</name>
-    <description>Hospitol</description>
+    <name>Skishop</name>
+    <description>Skishop est un site ecommerce de vente de ski</description>
     <properties>
         <java.version>17</java.version>
     </properties>
