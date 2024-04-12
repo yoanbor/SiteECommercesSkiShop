@@ -29,7 +29,7 @@ public class Product {
 
 
     /**
-     * @return the id
+     * @return the id d
      */
     public int getId() {
         return id;
