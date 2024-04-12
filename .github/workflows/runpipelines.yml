@@ -11,15 +11,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
 
-    services:
-      postgres:
-        image: postgres:16.2
-        env:
-          POSTGRES_USER: ${{secrets.CI_DB_USER}}
-          POSTGRES_PASSWORD: ${{secrets.CI_DB_PASSWORD}}
-          POSTGRES_DB: db
-        ports:
-          - 5432:5432
+
 
     steps:
       - name: Checkout code
